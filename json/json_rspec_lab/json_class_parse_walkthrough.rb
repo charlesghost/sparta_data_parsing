@@ -7,8 +7,8 @@ class ParseJson
   attr_accessor :json_file
   # Initialise the read and parsing of the JSON file
   # When providing an argument to an initialise method means you must give class initialisation with the argument
-  def initialize(json_file)
-    @json_file = JSON.parse(File.read(json_file))
+  def initialize(json)
+    @json_file = JSON.parse(json)
   end
 
   def get_base_value
@@ -30,6 +30,5 @@ class ParseJson
 
 end
 
-run = ParseJson.new('json_exchange_rates.json')
 
-p run.get_base_value
+
